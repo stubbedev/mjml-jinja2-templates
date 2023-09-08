@@ -1,0 +1,140 @@
+<mjml>
+  <mj-body
+    background-color="{{ design.body_bg_color }}"
+    color="{{ design.text_alt_color }}"
+    font-family="{{ design.font_fam_title }}">
+    <mj-section background-color="{{ design.text_alt_color }}">
+      <mj-group>
+        <mj-column>
+          <mj-navbar
+            base-url="{{ design.shop_domain }}"
+            hamburger="hamburger"
+            ico-color="{{ design.active_color }}">
+            <mj-navbar-link href="{{ design.shop_rel_url_home }}" color="{{ design.active_alt_color }}">home</mj-navbar-link>
+            <mj-navbar-link href="{{ design.shop_rel_url_blog }}" color="{{ design.active_alt_color }}">blog</mj-navbar-link>
+            <mj-navbar-link href="{{ design.shop_rel_url_store }}" color="{{ design.active_alt_color }}">store</mj-navbar-link>
+          </mj-navbar>
+        </mj-column>
+      </mj-group>
+    </mj-section>
+
+    {% for product in products %}
+      {% assign loop_index = loop.index0 | int %}
+      {% assign row_even = loop_index % 2 %}
+      {% if row_even > 0 and not loop.first %}
+        <mj-section
+          background-color="{{ design.section_bg_color }}"
+          background-repeat="repeat"
+          padding-bottom="{{ design.pad_0 }}"
+          padding="{{ design.pad_20 }} {{ design.pad_0 }}"
+          text-align="center"
+          direction="rtl"
+          vertical-align="top">
+      {% else %}
+        <mj-section
+          background-color="{{ design.section_bg_color }}"
+          background-repeat="repeat"
+          padding-bottom="{{ design.pad_0 }}"
+          padding="{{ design.pad_20 }} {{ design.pad_0 }}"
+          text-align="center"
+          vertical-align="top">
+      {% endif %}
+
+        <mj-column>
+          <mj-image
+            align="center"
+            padding-bottom="{{ design.pad_20 }}"
+            padding-left="{{ design.pad_30 }}"
+            padding-right="{{ design.pad_30 }}"
+            padding-top="{{ design.pad_0 }}"
+            padding="{{ design.pad_10 }} {{ design.pad_25 }}"
+            src="{{ product.image }}"
+            target="_blank"
+            width="{{ design.body_w_max }}"></mj-image>
+        </mj-column>
+        <mj-column>
+          <mj-text
+            align="left"
+            color="{{ design.body_color_hx }}"
+            font-family="{{ design.font_fam_section }}"
+            font-size="{{ design.font_size_13 }}"
+            line-height="{{ design.font_size_22 }}"
+            padding-bottom="{{ design.pad_0 }}"
+            padding-left="{{ design.pad_40 }}"
+            padding-right="{{ design.pad_40 }}"
+            padding-top="{{ design.pad_0 }}"
+            padding="{{ design.pad_10 }} {{ design.pad_25 }}">
+            <p style="margin: {{ design.pad_10 }} 0; color:{{ design.text_alt_color }}; font-size:{{ design.font_size_16 }}; font-family:{{ design.font_fam_cta }}">
+              <b>{{ product.name }}</b>
+            </p>
+            <p style="line-height: 16px; margin: {{ design.pad_10 }} 0;font-size:{{ design.font_size_14 }}; color:{{ design.text_alt_color }}; font-family:{{ design.font_fam_cta }};">{{ product.description|truncate(50) }}</p>
+            <p style="line-height: 16px; margin: {{ design.pad_10 }} 0; color:{{ design.text_alt_color }}; font-size:{{ design.font_size_14 }}; font-family:{{ design.font_fam_cta }}">
+              <mj-button href="{{ product.url }}" text-decoration="none">
+                {{ design.cta_text }}
+              </mj-button>
+            </p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    {% endfor %}
+
+    <mj-section
+      background-color="{{ design.active_color }}"
+      padding-bottom="{{ design.pad_0 }}"
+      font-family="{{ design.font_fam_section }}"
+      padding-top="{{ design.pad_0 }}">
+      <mj-column>
+        <mj-image
+          src="{{ design.shop_logo_url }}"
+          href="{{ design.shop_domain }}"
+          alt="Clerk logo"
+          align="center"
+          border="none"
+          width="{{ design.img_w_small }}"
+          padding-left="{{ design.pad_10 }}"
+          padding-right="{{ design.pad_10 }}"
+          padding-bottom="{{ design.pad_10 }}"
+          padding-top="{{ design.pad_10 }}"></mj-image>
+      </mj-column>
+      <mj-column>
+        <mj-button
+          align="right"
+          href="{{ design.shop_privacy_policy }}"
+          background-color="transparent"
+          color="{{ design.text_alt_color }}"
+          font-size="{{ design.font_size_14 }}"
+          padding-left="{{ design.pad_25 }}"
+          padding-right="{{ design.pad_25 }}"
+          padding-bottom="{{ design.pad_25 }}"
+          padding-top="{{ design.pad_25 }}">
+          Privacy policy
+        </mj-button>
+      </mj-column>
+      <mj-column>
+        <mj-social padding-top="{{ design.pad_20 }}">
+          {% if social_facebook_url %}
+            <mj-social-element name="facebook" href="{{ design.social_facebook_url }}"></mj-social-element>
+          {% endif %}
+          {% if social_twitter_url %}
+            <mj-social-element name="twitter" href="{{ design.social_twitter_url }}"></mj-social-element>
+          {% endif %}
+          {% if social_google_url %}
+            <mj-social-element name="google" href="{{ design.social_google_url }}"></mj-social-element>
+          {% endif %}
+          {% if social_pinterest_url %}
+            <mj-social-element name="pinterest" href="{{ design.social_pinterest_url }}"></mj-social-element>
+          {% endif %}
+          {% if social_tumblr_url %}
+            <mj-social-element name="tumblr" href="{{ design.social_tumblr_url }}"></mj-social-element>
+          {% endif %}
+          {% if social_linkedin_url %}
+            <mj-social-element name="linkedin" href="{{ design.social_linkedin_url }}"></mj-social-element>
+          {% endif %}
+          {% if social_xing_url %}
+            <mj-social-element name="xing" href="{{ design.social_xing_url }}"></mj-social-element>
+          {% endif %}
+        </mj-social>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
