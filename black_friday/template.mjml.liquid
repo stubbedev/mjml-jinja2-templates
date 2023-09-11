@@ -72,9 +72,9 @@
     </mj-section>
     {% for product in products %}
       {% assign loop_index = loop.index0 | int %}
-      {% assign end_row_index = loop_index + one %}
-      {% assign row_start = (loop_index % items_per_row == 0) %}
-      {% assign row_end = (end_row_index % items_per_row == 0) %}
+      {% assign end_row_index = loop_index + design.one %}
+      {% assign row_start = (loop_index % design.items_per_row == 0) %}
+      {% assign row_end = (end_row_index % design.items_per_row == 0) %}
       {% assign loop_last = loop.last %}
       {% if loop_index < 6 %}
         {% if loop_index == 0 or row_start %}
