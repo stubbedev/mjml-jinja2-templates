@@ -4,8 +4,8 @@
 -----------------------------------------------------
             LAYOUT DISTRIBUTION START
 -----------------------------------------------------
-#}{% assign design.items_per_row = 3 | int %}
-{% assign design.one = 1 | int %}
+#}{% assign __design__items_per_row = 3 | int %}
+{% assign __design__one = 1 | int %}
 
 {#
 -----------------------------------------------------
@@ -13,57 +13,57 @@
 -----------------------------------------------------
                   STYLING START
 -----------------------------------------------------
-#}{% assign design.body_w_max = '600px' %}
-{% assign design.col_w_large = '600px' %}
-{% assign design.col_w_medium = '400px' %}
-{% assign design.col_w_small = '200px' %}
+#}{% assign __design__body_w_max = '600px' %}
+{% assign __design__col_w_large = '600px' %}
+{% assign __design__col_w_medium = '400px' %}
+{% assign __design__col_w_small = '200px' %}
 
-{% assign design.col_w_rel_100 = '100%' %}
-{% assign design.col_w_rel_75 = '75%' %}
-{% assign design.col_w_rel_50 = '50%' %}
-{% assign design.col_w_rel_25 = '25%' %}
+{% assign __design__col_w_rel_100 = '100%' %}
+{% assign __design__col_w_rel_75 = '75%' %}
+{% assign __design__col_w_rel_50 = '50%' %}
+{% assign __design__col_w_rel_25 = '25%' %}
 
-{% assign design.pad_30 = '30px' %}
-{% assign design.pad_25 = '25px' %}
-{% assign design.pad_20 = '20px' %}
-{% assign design.pad_15 = '15px' %}
-{% assign design.pad_10 = '10px' %}
-{% assign design.pad_0 = '0px' %}
+{% assign __design__pad_30 = '30px' %}
+{% assign __design__pad_25 = '25px' %}
+{% assign __design__pad_20 = '20px' %}
+{% assign __design__pad_15 = '15px' %}
+{% assign __design__pad_10 = '10px' %}
+{% assign __design__pad_0 = '0px' %}
 
-{% assign design.img_w_large = '400px' %}
-{% assign design.img_w_medium = '300px' %}
-{% assign design.img_w_small = '200px' %}
-{% assign design.img_w_smallish = '170px' %}
-{% assign design.img_w_thumb = '70px' %}
-{% assign design.img_w_swatch = '40px' %}
+{% assign __design__img_w_large = '400px' %}
+{% assign __design__img_w_medium = '300px' %}
+{% assign __design__img_w_small = '200px' %}
+{% assign __design__img_w_smallish = '170px' %}
+{% assign __design__img_w_thumb = '70px' %}
+{% assign __design__img_w_swatch = '40px' %}
 
-{% assign design.font_size_40 = '40px' %}
-{% assign design.font_size_36 = '36px' %}
-{% assign design.font_size_27 = '27px' %}
-{% assign design.font_size_24 = '24px' %}
-{% assign design.font_size_19 = '19px' %}
-{% assign design.font_size_18 = '18px' %}
-{% assign design.font_size_17 = '17px' %}
-{% assign design.font_size_16 = '16px' %}
-{% assign design.font_size_15 = '15px' %}
-{% assign design.font_size_14 = '14px' %}
-{% assign design.font_size_13 = '13px' %}
-{% assign design.font_size_12 = '12px' %}
+{% assign __design__font_size_40 = '40px' %}
+{% assign __design__font_size_36 = '36px' %}
+{% assign __design__font_size_27 = '27px' %}
+{% assign __design__font_size_24 = '24px' %}
+{% assign __design__font_size_19 = '19px' %}
+{% assign __design__font_size_18 = '18px' %}
+{% assign __design__font_size_17 = '17px' %}
+{% assign __design__font_size_16 = '16px' %}
+{% assign __design__font_size_15 = '15px' %}
+{% assign __design__font_size_14 = '14px' %}
+{% assign __design__font_size_13 = '13px' %}
+{% assign __design__font_size_12 = '12px' %}
 
-{% assign design.font_fam_title = 'Helvetica' %}
-{% assign design.font_fam_section = 'Arial' %}
-{% assign design.font_fam_cta = 'Arial' %}
+{% assign __design__font_fam_title = 'Helvetica' %}
+{% assign __design__font_fam_section = 'Arial' %}
+{% assign __design__font_fam_cta = 'Arial' %}
 
-{% assign design.border_rd_0 = '0px' %}
-{% assign design.border_rd_3 = '3px' %}
-{% assign design.border_rd_10 = '10px' %}
-{% assign design.border_rd_40 = '40px' %}
+{% assign __design__border_rd_0 = '0px' %}
+{% assign __design__border_rd_3 = '3px' %}
+{% assign __design__border_rd_10 = '10px' %}
+{% assign __design__border_rd_40 = '40px' %}
 
-{% assign design.section_bg_color = 'rgb(255, 255, 255)' %}
-{% assign design.body_bg_color = 'rgb(236, 239, 244)' %}
-{% assign design.active_color = 'rgb(250, 135, 57)' %}
-{% assign design.text_color = 'rgb(0, 0, 0)' %}
-{% assign design.text_alt_color = 'rgb(47, 50, 59)' %}
+{% assign __design__section_bg_color = 'rgb(255, 255, 255)' %}
+{% assign __design__body_bg_color = 'rgb(236, 239, 244)' %}
+{% assign __design__active_color = 'rgb(250, 135, 57)' %}
+{% assign __design__text_color = 'rgb(0, 0, 0)' %}
+{% assign __design__text_alt_color = 'rgb(47, 50, 59)' %}
 
 
 {#
@@ -72,8 +72,8 @@
 -----------------------------------------------------
                 CUSTOM TEXTS START
 -----------------------------------------------------
-#}{% assign design.cta_text = 'BUY NOW' %}
-{% assign design.currency_symbol = '$' %}
+#}{% assign __design__cta_text = 'BUY NOW' %}
+{% assign __design__currency_symbol = '$' %}
 
 {#
 -----------------------------------------------------
@@ -81,23 +81,23 @@
 -----------------------------------------------------
                  SHOP VARS START
 -----------------------------------------------------
-#}{% assign design.shop_title = 'Clerk.io' %}
+#}{% assign __design__shop_title = 'Clerk.io' %}
 
-{% assign design.shop_domain = 'https://www.clerk.io' %}
-{% assign design.shop_privacy_policy = 'https://help.clerk.io/help/gdpr/gdpr/' %}
-{% assign design.shop_rel_url_home = '/home' %}
-{% assign design.shop_rel_url_blog = '/blog' %}
-{% assign design.shop_rel_url_store = '/store' %}
+{% assign __design__shop_domain = 'https://www.clerk.io' %}
+{% assign __design__shop_privacy_policy = 'https://help.clerk.io/help/gdpr/gdpr/' %}
+{% assign __design__shop_rel_url_home = '/home' %}
+{% assign __design__shop_rel_url_blog = '/blog' %}
+{% assign __design__shop_rel_url_store = '/store' %}
 
-{% assign design.shop_logo_url = 'https://global-uploads.webflow.com/63357df7224a8a49353f3636/63381c44a918c228b61fd12e_Logo.svg' %}
+{% assign __design__shop_logo_url = 'https://global-uploads.webflow.com/63357df7224a8a49353f3636/63381c44a918c228b61fd12e_Logo.svg' %}
 
-{% assign design.social_facebook_url = '' %}
-{% assign design.social_twitter_url = '' %}
-{% assign design.social_google_url = '' %}
-{% assign design.social_pinterest_url = '' %}
-{% assign design.social_tumblr_url = '' %}
-{% assign design.social_linkedin_url = '' %}
-{% assign design.social_xing_url = '' %}
+{% assign __design__social_facebook_url = '' %}
+{% assign __design__social_twitter_url = '' %}
+{% assign __design__social_google_url = '' %}
+{% assign __design__social_pinterest_url = '' %}
+{% assign __design__social_tumblr_url = '' %}
+{% assign __design__social_linkedin_url = '' %}
+{% assign __design__social_xing_url = '' %}
 
 {#
 -----------------------------------------------------
